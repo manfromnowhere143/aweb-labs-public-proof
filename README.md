@@ -49,6 +49,18 @@ The short version:
 | Who is building it? | Daniel Wahnich, founder/operator, Israel. |
 | What is it not? | Not a chatbot wrapper, not a website builder, not a Web3-first pitch, not a trading-profit product. |
 
+## Agentic Operations
+
+Aweb does not hide the operating loop.
+
+The company is dogfooding the same governed-agent pattern it is building: Aweb scouts opportunities, recovers prior communication state, checks duplicate risk, selects current source material, prepares drafts, maps application fields, and blocks external action until Daniel approves.
+
+That matters because resource-seeking is not a side quest for an AI operations company. It is one of the hardest real workflows: incomplete context, high consequences, stale material risk, private data boundaries, public claims, forms, emails, follow-ups, and human accountability.
+
+The point is not "an AI sends things by itself." The point is sharper:
+
+> Aweb turns serious company operations into supervised, auditable agent workflows.
+
 ## Reviewer Path
 
 | Step | Surface | Why it matters |
@@ -61,6 +73,21 @@ The short version:
 | 6 | https://aweb-wine.vercel.app/docs/api-reference | API-facing platform surface. |
 | 7 | https://aweb-wine.vercel.app/api-warehouse/providers | Provider and capability discovery surface. |
 | 8 | [SPEC.md](./SPEC.md) | Public control-plane manifest and receipt shape. |
+
+## Infrastructure Support
+
+Aweb has earned early startup-program and infrastructure-credit support from developer-platform ecosystems. This is useful evidence, but it is not presented as customer traction, revenue, endorsement, or investment.
+
+| Provider | Recorded support status | Why it matters to Aweb |
+| --- | --- | --- |
+| Neon | Credits applied | Postgres data plane for workflows, receipts, state, and operational records. |
+| E2B | E2B for Startups accepted | Governed sandbox execution for agent-generated code and replayable runs. |
+| Sentry | Sentry for Startups credits approved | Observability for production agent workflows and failure recovery. |
+| Mixpanel | Mixpanel for Startups accepted | Product analytics for operator surfaces and workflow usage. |
+| Amplitude | Startup Scholarship accepted | Analytics, experimentation, and product insight for Aweb surfaces. |
+| MongoDB | Startup-program route recorded | Data, search, and AI application infrastructure route; not claimed here as endorsement. |
+
+No provider listed here is described as an investor, customer, partner, or endorser of Aweb unless a provider explicitly says so in writing.
 
 ## Control Plane
 

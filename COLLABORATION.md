@@ -17,6 +17,22 @@ Aweb is a fit for:
 
 ## Useful Conversations
 
+### Resource / Mission Support
+
+Aweb is openly using agentic operations to secure the resources it needs to continue building. That is part of the proof, not a secret side channel.
+
+The responsible routes are:
+
+- paid pilot,
+- design-partner sprint,
+- grant,
+- sponsorship,
+- startup program,
+- technical angel conversation,
+- infrastructure-credit support.
+
+The boundary is equally important: this repository does not publish wallet addresses, investment terms, return promises, or informal equity offers.
+
 ### Technical Angel / Investor
 
 The right conversation is not "here is a chatbot." The right conversation is:
@@ -60,6 +76,21 @@ Aweb may fit programs funding:
 - MCP docs: https://aweb-wine.vercel.app/docs/mcp
 - API docs: https://aweb-wine.vercel.app/docs/api-reference
 - Provider catalog: https://aweb-wine.vercel.app/api-warehouse/providers
+- Public control-plane spec: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/SPEC.md
+
+## Paid Pilot Route
+
+The fastest commercial route is a focused Aweb Agent Operations Audit.
+
+Useful scope:
+
+- map one real agent/tool/API workflow,
+- identify sensitive action boundaries,
+- define human approval gates,
+- design the evidence/receipt model,
+- produce an implementation roadmap for one governed workflow.
+
+This is appropriate for founders or teams already using agents in operations, data work, support, sales, internal tools, cloud/database workflows, or generated-code workflows.
 
 ## Contact
 
