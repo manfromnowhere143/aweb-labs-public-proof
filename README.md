@@ -25,6 +25,8 @@
   &nbsp;/&nbsp;
   <a href="./SPEC.md">Spec</a>
   &nbsp;/&nbsp;
+  <a href="./PILOT.md">Pilot</a>
+  &nbsp;/&nbsp;
   <a href="./COLLABORATION.md">Collaboration</a>
 </p>
 
@@ -225,6 +227,8 @@ Aweb is early, founder-led, and looking for serious conversations with:
 - grant programs,
 - design partners,
 - teams already using AI agents in real operations.
+
+The fastest practical collaboration path is a paid [Aweb Agent Operations Audit](./PILOT.md) for a real agent/tool/API workflow.
 
 See [COLLABORATION.md](./COLLABORATION.md) for public-safe support and partnership routes.
 

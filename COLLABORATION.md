@@ -77,6 +77,7 @@ Aweb may fit programs funding:
 - API docs: https://aweb-wine.vercel.app/docs/api-reference
 - Provider catalog: https://aweb-wine.vercel.app/api-warehouse/providers
 - Public control-plane spec: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/SPEC.md
+- Paid pilot outline: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/PILOT.md
 
 ## Paid Pilot Route
 
