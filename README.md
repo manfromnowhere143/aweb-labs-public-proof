@@ -23,6 +23,8 @@
   &nbsp;/&nbsp;
   <a href="https://aweb-wine.vercel.app/docs/api-reference">API</a>
   &nbsp;/&nbsp;
+  <a href="./SPEC.md">Spec</a>
+  &nbsp;/&nbsp;
   <a href="./COLLABORATION.md">Collaboration</a>
 </p>
 
@@ -58,6 +60,7 @@ The short version:
 | 5 | https://aweb-wine.vercel.app/docs/mcp | MCP/tool integration direction. |
 | 6 | https://aweb-wine.vercel.app/docs/api-reference | API-facing platform surface. |
 | 7 | https://aweb-wine.vercel.app/api-warehouse/providers | Provider and capability discovery surface. |
+| 8 | [SPEC.md](./SPEC.md) | Public control-plane manifest and receipt shape. |
 
 ## Control Plane
 

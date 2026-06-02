@@ -1,0 +1,48 @@
+{
+  "schema": "aweb.agent_receipt.v0",
+  "run_id": "run_public_funding_ops_example",
+  "status": "completed",
+  "operator_approval": {
+    "required_for_external_action": true,
+    "granted_for_external_action": false,
+    "reason": "Public-safe drafts and proof materials can be prepared. Sending, submitting, posting, or payment instructions remain gated."
+  },
+  "actions": [
+    {
+      "type": "recover",
+      "target": "prior_outreach_state",
+      "result": "dedupe_inventory_created"
+    },
+    {
+      "type": "verify",
+      "target": "current_public_sources",
+      "result": "official_sources_preferred"
+    },
+    {
+      "type": "write",
+      "target": "public_proof_repo",
+      "result": "public_safe_material_created"
+    }
+  ],
+  "blocked_actions": [
+    {
+      "type": "send_email",
+      "reason": "Requires exact target, final copy, and Daniel approval."
+    },
+    {
+      "type": "submit_application",
+      "reason": "Requires verified field values and Daniel approval."
+    },
+    {
+      "type": "publish_wallet",
+      "reason": "Wallet instructions are target-specific and must not be posted publicly."
+    }
+  ],
+  "public_safety": {
+    "private_email_exposed": false,
+    "credentials_exposed": false,
+    "wallet_exposed": false,
+    "private_investor_details_exposed": false,
+    "unverified_claims_added": false
+  }
+}

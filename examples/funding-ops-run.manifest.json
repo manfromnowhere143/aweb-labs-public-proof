@@ -1,0 +1,56 @@
+{
+  "schema": "aweb.governed_run_manifest.v0",
+  "run_id": "run_public_funding_ops_example",
+  "objective": "Recover prior outreach state and prepare public-safe funding/application materials.",
+  "operator": {
+    "name": "Daniel Wahnich",
+    "role": "founder_operator"
+  },
+  "risk_tier": "external_action_gated",
+  "source_policy": {
+    "current_materials_only": true,
+    "no_private_data": true,
+    "no_stale_positioning": true,
+    "no_unverified_claims": true,
+    "finance_language": "research_simulation_decision_support_only"
+  },
+  "capabilities": [
+    {
+      "name": "workspace_search",
+      "purpose": "Recover prior outreach, drafts, public materials, and duplicate risk.",
+      "access": "local_read"
+    },
+    {
+      "name": "web_research",
+      "purpose": "Verify live opportunity facts from official sources.",
+      "access": "public_web"
+    },
+    {
+      "name": "draft_generation",
+      "purpose": "Prepare field maps, source maps, and draft language.",
+      "access": "local_write"
+    }
+  ],
+  "approval_gates": [
+    {
+      "action": "send_email",
+      "requires_human_approval": true
+    },
+    {
+      "action": "submit_application",
+      "requires_human_approval": true
+    },
+    {
+      "action": "post_public_social",
+      "requires_human_approval": true
+    }
+  ],
+  "expected_outputs": [
+    "communication_operation_audit",
+    "recent_outreach_recovery",
+    "application_field_map",
+    "source_material_map",
+    "draft_package",
+    "receipt"
+  ]
+}
