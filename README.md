@@ -1,92 +1,134 @@
-# Aweb Labs Public Proof
+<p align="center">
+  <a href="https://aweb-wine.vercel.app/final">
+    <img src="https://aweb-wine.vercel.app/identity/aweb-business-mail-avatar.png" width="104" alt="Aweb avatar">
+  </a>
+</p>
 
-**Aweb is Mission Control Cloud for governed AI agent work.**
+<h1 align="center">Aweb Labs Public Proof</h1>
+
+<p align="center">
+  <strong>Mission Control Cloud for governed AI agent work.</strong>
+</p>
+
+<p align="center">
+  <a href="https://aweb-wine.vercel.app/final">Final</a>
+  &nbsp;/&nbsp;
+  <a href="https://aweb-wine.vercel.app/v2">V2</a>
+  &nbsp;/&nbsp;
+  <a href="https://aweb-wine.vercel.app/product">Product</a>
+  &nbsp;/&nbsp;
+  <a href="https://aweb-wine.vercel.app/docs">Docs</a>
+  &nbsp;/&nbsp;
+  <a href="https://aweb-wine.vercel.app/docs/mcp">MCP</a>
+  &nbsp;/&nbsp;
+  <a href="https://aweb-wine.vercel.app/docs/api-reference">API</a>
+  &nbsp;/&nbsp;
+  <a href="./COLLABORATION.md">Collaboration</a>
+</p>
+
+---
 
 Aweb connects AI models, APIs, MCP tools, provider warehouses, databases, governed execution, code validation, approvals, and system builders into auditable AI production workflows.
 
-This repository is a public proof surface for reviewers, investors, collaborators, and startup programs. It intentionally contains no private source code, credentials, customer data, investor communications, internal logs, or legal documents.
+This repository is the public proof surface for reviewers, investors, collaborators, grant programs, and startup programs. It is deliberately safe: no private source code, credentials, customer data, investor communications, internal logs, application links, legal documents, or wallet instructions.
 
-## Review In Five Minutes
+The short version:
 
-| Layer | Public surface | What to verify |
+> Let agents do ambitious work. Make the boundary boring, explicit, and inspectable.
+
+## Aweb In One Screen
+
+| Question | Answer |
+| --- | --- |
+| What is Aweb? | Mission Control Cloud for governed AI agent work. |
+| What does it connect? | Models, APIs, MCP tools, provider catalogs, databases, execution environments, approvals, and system builders. |
+| What is the product category? | Agentic orchestration, governed execution, AI operations, and control-plane infrastructure. |
+| What is the proof? | Aweb is using the same operating loop to run its own communication, application, funding, and material-preparation workflows under Daniel's approval. |
+| Who is building it? | Daniel Wahnich, founder/operator, Israel. |
+| What is it not? | Not a chatbot wrapper, not a website builder, not a Web3-first pitch, not a trading-profit product. |
+
+## Reviewer Path
+
+| Step | Surface | Why it matters |
 | --- | --- | --- |
-| Company/product | https://aweb-wine.vercel.app/final | Mission Control Cloud, founder-led operation, current Aweb positioning |
-| Product page | https://aweb-wine.vercel.app/product | Control plane for governed agent workflows |
-| V2 surface | https://aweb-wine.vercel.app/v2 | Current application direction and operator experience |
-| Docs | https://aweb-wine.vercel.app/docs | Public developer and architecture materials |
-| MCP docs | https://aweb-wine.vercel.app/docs/mcp | Aweb's tool and MCP integration direction |
-| API reference | https://aweb-wine.vercel.app/docs/api-reference | API-facing platform surface |
-| Providers | https://aweb-wine.vercel.app/docs/providers | Provider and capability model |
-| Catalog | https://aweb-wine.vercel.app/api-warehouse/providers | Public provider discovery surface |
+| 1 | https://aweb-wine.vercel.app/final | Current public positioning, founder proof, live product links. |
+| 2 | https://aweb-wine.vercel.app/v2 | Current application surface and operator direction. |
+| 3 | https://aweb-wine.vercel.app/product | Product framing for governed agent workflows. |
+| 4 | https://aweb-wine.vercel.app/docs | Public docs and architecture entry point. |
+| 5 | https://aweb-wine.vercel.app/docs/mcp | MCP/tool integration direction. |
+| 6 | https://aweb-wine.vercel.app/docs/api-reference | API-facing platform surface. |
+| 7 | https://aweb-wine.vercel.app/api-warehouse/providers | Provider and capability discovery surface. |
 
-## Architecture
+## Control Plane
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#111111", "primaryTextColor": "#ffffff", "primaryBorderColor": "#111111", "lineColor": "#555555", "secondaryColor": "#f5f5f5", "tertiaryColor": "#ffffff"}}}%%
 flowchart LR
   Operator["Human operator / team"] --> Mission["Mission Control Cloud"]
-  Mission --> Maestro["Maestro orchestration"]
-  Maestro --> Models["AI models"]
-  Maestro --> API["API Warehouse"]
-  Maestro --> MCP["MCP Warehouse"]
-  Maestro --> Code["Aweb Code"]
-  Maestro --> Systems["System builders"]
 
-  API --> Providers["Provider APIs"]
-  MCP --> Tools["MCP tools"]
-  Code --> Execution["Governed execution"]
-  Systems --> Products["Vertical products"]
+  subgraph Orchestration["Aweb operating layer"]
+    Mission --> Maestro["Maestro"]
+    Maestro --> Policy["OS9 / Trust Runtime"]
+    Policy --> Approvals["Approval gates"]
+    Policy --> Validation["Validation"]
+    Policy --> Receipts["Receipts and evidence"]
+  end
 
-  Maestro --> Trust["OS9 / Trust Runtime"]
-  Trust --> Policy["Policy and boundaries"]
-  Trust --> Approvals["Human approval gates"]
-  Trust --> Receipts["Agent Receipts"]
-  Receipts --> Audit["Audit, debug, repeat"]
+  subgraph Capability["Capability fabric"]
+    Maestro --> API["API Warehouse"]
+    Maestro --> MCP["MCP Warehouse"]
+    Maestro --> Code["Aweb Code"]
+    Maestro --> Memory["Databases / memory"]
+  end
+
+  subgraph World["External work"]
+    API --> Providers["Provider APIs"]
+    MCP --> Tools["MCP tools"]
+    Code --> Execution["Governed execution"]
+    Memory --> State["State and context"]
+  end
+
+  Receipts --> Audit["Audit / debug / repeat"]
+
+  classDef dark fill:#111111,stroke:#111111,color:#ffffff;
+  classDef light fill:#f6f6f6,stroke:#cfcfcf,color:#111111;
+  class Mission,Maestro,Policy dark;
+  class Operator,Approvals,Validation,Receipts,API,MCP,Code,Memory,Providers,Tools,Execution,State,Audit light;
 ```
 
-Aweb exists because serious agent work needs more than prompts and tool access. It needs a control plane that can discover capabilities, route work through tools and providers, enforce policy, preserve human approval where it matters, and keep evidence of what happened.
+The model can improvise. The control plane should not.
+
+Aweb's job is to keep agent work routed, bounded, approved, validated, evidenced, and repeatable.
 
 ## Operating Loop
 
 ```mermaid
 sequenceDiagram
-  participant Founder as Daniel / operator
-  participant Aweb as Aweb Mission Control
-  participant Scout as Scout and dedupe
-  participant Materials as Source materials
-  participant Gate as Approval gate
-  participant Route as External route
-  participant Evidence as Evidence store
+  participant D as Daniel / operator
+  participant A as Aweb Mission Control
+  participant S as Scout and recover
+  participant M as Materials source map
+  participant G as Approval gate
+  participant X as External route
+  participant R as Receipt / ledger
 
-  Founder->>Aweb: Define objective and constraints
-  Aweb->>Scout: Search opportunities and recover prior state
-  Scout->>Evidence: Record duplicates, blockers, and fit
-  Aweb->>Materials: Select current public-safe language
-  Materials->>Gate: Prepare draft answers and artifacts
-  Gate->>Founder: Require explicit approval for send/submit
-  Founder->>Route: Approve final action when ready
-  Route->>Evidence: Store receipt, response, and follow-up state
+  D->>A: Set objective, constraints, and risk boundaries
+  A->>S: Search, recover context, and dedupe prior actions
+  S->>R: Record what exists, what is stale, and what is blocked
+  A->>M: Select current public-safe source material
+  M->>G: Prepare exact draft or field map
+  G->>D: Stop for approval before send, submit, or post
+  D->>X: Approve final external action
+  X->>R: Store result, response, and follow-up state
 ```
 
-This operating loop is itself part of the product proof: Aweb is being used to run serious company operations under Daniel's approval, including funding scouts, application maps, communication recovery, and external-action gates.
+This loop is not a demo script. It is how Aweb is operating its own serious workflows.
 
-## Platform Thesis
-
-AI agents are moving from chat into real work: API calls, MCP tools, browsers, databases, cloud services, generated products, email, application workflows, internal operations, and production systems.
-
-Aweb is the operating layer for that shift:
-
-- capability discovery across APIs and MCP tools,
-- durable multi-step workflow orchestration,
-- governed execution and validation,
-- policy, approvals, and operator supervision,
-- evidence and receipts for auditability,
-- vertical systems built on the same substrate.
-
-## Product Proofs
+## Product Surface
 
 ```mermaid
 flowchart TB
-  Core["Aweb core platform"]
+  Core["Aweb core"]
 
   Core --> Mission["Mission Control Cloud"]
   Core --> Maestro["Maestro"]
@@ -94,11 +136,12 @@ flowchart TB
   Core --> Trust["OS9 / Trust Runtime"]
   Core --> Receipts["Agent Receipts"]
   Core --> Code["Aweb Code"]
+  Core --> Builders["System builders"]
 
-  Core --> GEX["GEX"]
-  Core --> Veritas["Veritas"]
-  Core --> Nina["Nina"]
-  Core --> Leony["Leony"]
+  Builders --> GEX["GEX"]
+  Builders --> Veritas["Veritas"]
+  Builders --> Nina["Nina"]
+  Builders --> Leony["Leony"]
 
   GEX --> GEXNote["Research-grade market analytics"]
   Veritas --> VeritasNote["Probability and calibration research"]
@@ -106,17 +149,17 @@ flowchart TB
   Leony --> LeonyNote["AI creative studio workflows"]
 ```
 
-Core platform:
+Core components:
 
-- **Mission Control Cloud:** operator surface for governed agent work.
-- **Maestro:** orchestration layer for durable multi-step workflows.
-- **API Warehouse:** provider API capability map and generated client direction.
+- **Mission Control Cloud:** the operator surface for governed agent work.
+- **Maestro:** orchestration for durable multi-step workflows.
+- **API Warehouse:** provider API capability mapping and generated client direction.
 - **MCP Warehouse:** tool/provider discovery and adapter surface.
-- **OS9 / Trust Runtime:** approvals, policy, boundaries, and evidence.
+- **OS9 / Trust Runtime:** approvals, policies, boundaries, and evidence.
 - **Aweb Code:** validation and governed execution path.
-- **System builders:** Aweb-generated product and workflow surfaces.
+- **System builders:** vertical products and workflow surfaces built on the same substrate.
 
-Vertical proof systems:
+Vertical proofs:
 
 - **GEX:** research-grade market-structure analytics and risk visibility.
 - **Veritas:** probability research, calibration, and decision-support intelligence.
@@ -125,32 +168,39 @@ Vertical proof systems:
 
 Finance-related systems are presented only as research, simulation, risk visibility, and decision support. They are not financial advice, do not imply guaranteed returns, and do not represent autonomous capital deployment.
 
-## Collaboration Posture
+## Why This Matters
 
-Aweb is early, founder-led, and operated by Daniel Wahnich from Israel.
+Agents are becoming software operators. They touch APIs, files, browsers, databases, payments, cloud services, docs, customer systems, and generated code. The hard part is no longer "can a model call a tool?"
 
-The company is preparing serious conversations with:
+The hard part is:
+
+- Who authorized this action?
+- Which capability was used?
+- Which policy applied?
+- What context was visible?
+- What changed?
+- What failed?
+- Can a human review it?
+- Can the workflow run again without becoming folklore?
+
+Aweb is built for that layer.
+
+## Current Collaboration Fit
+
+Aweb is early, founder-led, and looking for serious conversations with:
 
 - technical angels,
 - AI infrastructure investors,
 - startup programs,
 - grant programs,
 - design partners,
-- teams that need governed AI workflows rather than another chatbot.
+- teams already using AI agents in real operations.
 
-Public materials intentionally avoid:
-
-- Web3-first framing,
-- trading-profit claims,
-- stale Alfred-era copy,
-- chatbot-only framing,
-- website-builder-only framing,
-- public investment terms,
-- private emails, credentials, logs, or investor details.
+See [COLLABORATION.md](./COLLABORATION.md) for public-safe support and partnership routes.
 
 ## Language Boundary
 
-Use this:
+Use:
 
 - Mission Control Cloud for governed AI agent work.
 - Agentic orchestration platform.
@@ -160,14 +210,14 @@ Use this:
 - Auditable workflows and evidence.
 - API Warehouse, MCP Warehouse, Maestro, Trust Runtime, OS9.
 
-Do not use this:
+Do not use:
 
 - AI founder with no human accountability.
 - Guaranteed trading returns.
 - Autonomous capital deployment.
 - Crypto-first or Web3-first company.
 - Alfred-era product language.
-- Private investor, email, credential, or legal information.
+- Private investor, email, credential, legal, or wallet information.
 
 ## Contact
 
