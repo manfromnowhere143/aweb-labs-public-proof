@@ -98,7 +98,7 @@ This is appropriate for founders or teams already using agents in operations, da
 Daniel Wahnich  
 Founder, Aweb  
 dev@alfred-ai.app
-cogitoergosum143@gmail.com
+
 
 ## Boundary
 
