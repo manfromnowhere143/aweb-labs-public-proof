@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://aweb-wine.vercel.app/final">
-    <img src="https://aweb-wine.vercel.app/identity/aweb-business-mail-avatar.png" width="104" alt="Aweb avatar">
+  <a href="https://aweblabs.ai/final">
+    <img src="https://aweblabs.ai/identity/aweb-business-mail-avatar.png" width="104" alt="Aweb avatar">
   </a>
 </p>
 
@@ -11,17 +11,21 @@
 </p>
 
 <p align="center">
-  <a href="https://aweb-wine.vercel.app/final">Final</a>
+  <a href="https://aweblabs.ai/final">Final</a>
   &nbsp;/&nbsp;
-  <a href="https://aweb-wine.vercel.app/v2">V2</a>
+  <a href="https://aweblabs.ai/v2">V2</a>
   &nbsp;/&nbsp;
-  <a href="https://aweb-wine.vercel.app/product">Product</a>
+  <a href="https://aweblabs.ai/product">Product</a>
   &nbsp;/&nbsp;
-  <a href="https://aweb-wine.vercel.app/docs">Docs</a>
+  <a href="https://aweblabs.ai/docs">Docs</a>
   &nbsp;/&nbsp;
-  <a href="https://aweb-wine.vercel.app/docs/mcp">MCP</a>
+  <a href="https://aweblabs.ai/docs/mcp">MCP</a>
   &nbsp;/&nbsp;
-  <a href="https://aweb-wine.vercel.app/docs/api-reference">API</a>
+  <a href="https://aweblabs.ai/docs/api-reference">API</a>
+  &nbsp;/&nbsp;
+  <a href="https://aweblabs.ai/agent-operations-audit">Audit</a>
+  &nbsp;/&nbsp;
+  <a href="./REVIEWER_GUIDE.md">Reviewer</a>
   &nbsp;/&nbsp;
   <a href="./SPEC.md">Spec</a>
   &nbsp;/&nbsp;
@@ -40,6 +44,10 @@ The short version:
 
 > Let agents do ambitious work. Make the boundary boring, explicit, and inspectable.
 
+Canonical web surface: https://aweblabs.ai
+
+Machine-readable proof index: [PUBLIC-PROOF.json](./PUBLIC-PROOF.json)
+
 ## Aweb In One Screen
 
 | Question | Answer |
@@ -48,8 +56,21 @@ The short version:
 | What does it connect? | Models, APIs, MCP tools, provider catalogs, databases, execution environments, approvals, and system builders. |
 | What is the product category? | Agentic orchestration, governed execution, AI operations, and control-plane infrastructure. |
 | What is the proof? | Aweb is using the same operating loop to run its own communication, application, funding, and material-preparation workflows under Daniel's approval. |
+| What can a team buy now? | A focused Agent Operations Audit for one agent/tool/API workflow. |
 | Who is building it? | Daniel Wahnich, founder/operator, Israel. |
 | What is it not? | Not a chatbot wrapper, not a website builder, not a Web3-first pitch, not a trading-profit product. |
+
+## If You Have 10 Minutes
+
+Read this repo in this order:
+
+1. [REVIEWER_GUIDE.md](./REVIEWER_GUIDE.md) for the technical review path.
+2. [SPEC.md](./SPEC.md) for the governed run model.
+3. [examples/funding-ops-run.manifest.json](./examples/funding-ops-run.manifest.json) for the example manifest.
+4. [examples/funding-ops-receipt.redacted.json](./examples/funding-ops-receipt.redacted.json) for the example receipt.
+5. https://aweblabs.ai/agent-operations-audit for the narrow commercial entry point.
+
+The key review question is simple: where does the system stop before doing something risky?
 
 ## Agentic Operations
 
@@ -67,14 +88,17 @@ The point is not "an AI sends things by itself." The point is sharper:
 
 | Step | Surface | Why it matters |
 | --- | --- | --- |
-| 1 | https://aweb-wine.vercel.app/final | Current public positioning, founder proof, live product links. |
-| 2 | https://aweb-wine.vercel.app/v2 | Current application surface and operator direction. |
-| 3 | https://aweb-wine.vercel.app/product | Product framing for governed agent workflows. |
-| 4 | https://aweb-wine.vercel.app/docs | Public docs and architecture entry point. |
-| 5 | https://aweb-wine.vercel.app/docs/mcp | MCP/tool integration direction. |
-| 6 | https://aweb-wine.vercel.app/docs/api-reference | API-facing platform surface. |
-| 7 | https://aweb-wine.vercel.app/api-warehouse/providers | Provider and capability discovery surface. |
-| 8 | [SPEC.md](./SPEC.md) | Public control-plane manifest and receipt shape. |
+| 1 | https://aweblabs.ai/final | Current public positioning, founder proof, live product links. |
+| 2 | https://aweblabs.ai/v2 | Current application surface and operator direction. |
+| 3 | https://aweblabs.ai/product | Product framing for governed agent workflows. |
+| 4 | https://aweblabs.ai/docs | Public docs and architecture entry point. |
+| 5 | https://aweblabs.ai/docs/mcp | MCP/tool integration direction. |
+| 6 | https://aweblabs.ai/docs/api-reference | API-facing platform surface. |
+| 7 | https://aweblabs.ai/api-warehouse/providers | Provider and capability discovery surface. |
+| 8 | https://aweblabs.ai/agent-operations-audit | Paid pilot intake for teams using agents against real tools. |
+| 9 | [REVIEWER_GUIDE.md](./REVIEWER_GUIDE.md) | Fast technical review path and non-negotiable invariants. |
+| 10 | [SPEC.md](./SPEC.md) | Public control-plane manifest and receipt shape. |
+| 11 | [PUBLIC-PROOF.json](./PUBLIC-PROOF.json) | Machine-readable index of public surfaces, claims, and boundaries. |
 
 ## Infrastructure Support
 
@@ -131,6 +155,16 @@ flowchart LR
 The model can improvise. The control plane should not.
 
 Aweb's job is to keep agent work routed, bounded, approved, validated, evidenced, and repeatable.
+
+## Boundary Invariants
+
+| Invariant | What it means |
+| --- | --- |
+| Default-deny external action | Email, submit, post, payment, legal, credential, and account actions need explicit human approval. |
+| No secret leakage | Public proof must not expose credentials, OAuth tokens, private inboxes, legal docs, wallet instructions, or private investor/customer data. |
+| Evidence before action | High-consequence workflows need source maps, claim checks, and reviewable context before execution. |
+| Receipts after action | Completed, blocked, failed, and rejected runs leave a durable summary of what happened. |
+| Honest uncertainty | Missing source material, stale claims, duplicate risk, and incomplete setup should block or downgrade the run. |
 
 ## Operating Loop
 
@@ -219,6 +253,17 @@ Aweb is built for that layer.
 
 ## Current Collaboration Fit
 
+Aweb is currently strongest for:
+
+- paid Agent Operations Audits,
+- technical design partners,
+- AI infrastructure investors and accelerators,
+- startup programs that care about agentic AI, MCP tools, provider routing, approvals, receipts, and production governance.
+
+Commercial intake:
+
+https://aweblabs.ai/agent-operations-audit
+
 Aweb is early, founder-led, and looking for serious conversations with:
 
 - technical angels,
@@ -231,6 +276,16 @@ Aweb is early, founder-led, and looking for serious conversations with:
 The fastest practical collaboration path is a paid [Aweb Agent Operations Audit](./PILOT.md) for a real agent/tool/API workflow.
 
 See [COLLABORATION.md](./COLLABORATION.md) for public-safe support and partnership routes.
+
+## Public Proof Files
+
+| File | Purpose |
+| --- | --- |
+| [REVIEWER_GUIDE.md](./REVIEWER_GUIDE.md) | Fast technical review path and evaluation criteria. |
+| [PUBLIC-PROOF.json](./PUBLIC-PROOF.json) | Machine-readable public proof index. |
+| [SPEC.md](./SPEC.md) | Governed run state machine, manifest, receipt, and boundary classes. |
+| [PILOT.md](./PILOT.md) | Paid Agent Operations Audit scope. |
+| [COLLABORATION.md](./COLLABORATION.md) | Public-safe support and partnership routes. |
 
 ## Language Boundary
 
@@ -257,5 +312,5 @@ Do not use:
 
 Daniel Wahnich  
 Founder, Aweb  
-business@aweb.ai  
-https://aweb-wine.vercel.app/final
+business@aweblabs.ai
+https://aweblabs.ai/final

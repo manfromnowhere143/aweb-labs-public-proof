@@ -7,6 +7,13 @@
     "role": "founder_operator"
   },
   "risk_tier": "external_action_gated",
+  "policy_invariants": [
+    "default_deny_external_action",
+    "source_material_current",
+    "claim_verification",
+    "secret_redaction",
+    "receipt_required"
+  ],
   "source_policy": {
     "current_materials_only": true,
     "no_private_data": true,
@@ -52,5 +59,9 @@
     "source_material_map",
     "draft_package",
     "receipt"
-  ]
+  ],
+  "approval_result": {
+    "external_action_approved": false,
+    "reason": "This public example stops at draft/proof preparation."
+  }
 }

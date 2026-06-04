@@ -1,0 +1,90 @@
+{
+  "schema": "aweb.public_proof.v1",
+  "name": "Aweb Labs Public Proof",
+  "canonical_url": "https://aweblabs.ai",
+  "repository": "https://github.com/manfromnowhere143/aweb-labs-public-proof",
+  "positioning": {
+    "company": "Aweb Labs",
+    "product": "Aweb",
+    "category": "Mission Control Cloud for governed AI agent work",
+    "one_line": "Aweb turns human intent into governed agent execution with policy before action and receipts after action."
+  },
+  "public_surfaces": [
+    {
+      "label": "Final positioning",
+      "url": "https://aweblabs.ai/final"
+    },
+    {
+      "label": "Application surface",
+      "url": "https://aweblabs.ai/v2"
+    },
+    {
+      "label": "Product page",
+      "url": "https://aweblabs.ai/product"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://aweblabs.ai/docs"
+    },
+    {
+      "label": "MCP documentation",
+      "url": "https://aweblabs.ai/docs/mcp"
+    },
+    {
+      "label": "API reference",
+      "url": "https://aweblabs.ai/docs/api-reference"
+    },
+    {
+      "label": "Provider catalog",
+      "url": "https://aweblabs.ai/api-warehouse/providers"
+    },
+    {
+      "label": "Agent Operations Audit",
+      "url": "https://aweblabs.ai/agent-operations-audit"
+    }
+  ],
+  "repo_artifacts": [
+    "README.md",
+    "REVIEWER_GUIDE.md",
+    "SPEC.md",
+    "PILOT.md",
+    "COLLABORATION.md",
+    "examples/funding-ops-run.manifest.json",
+    "examples/funding-ops-receipt.redacted.json"
+  ],
+  "control_plane_invariants": [
+    "default_deny_external_action",
+    "no_secret_leakage",
+    "evidence_before_action",
+    "receipts_after_action",
+    "honest_uncertainty",
+    "finance_boundary_research_simulation_decision_support_only"
+  ],
+  "boundary_classes": [
+    "read_only",
+    "local_write",
+    "external_action_gated",
+    "secret_gated",
+    "claim_gated"
+  ],
+  "public_safety": {
+    "private_source_code_included": false,
+    "credentials_included": false,
+    "private_customer_data_included": false,
+    "private_investor_details_included": false,
+    "wallet_instructions_included": false,
+    "legal_documents_included": false,
+    "financial_advice_claimed": false,
+    "autonomous_capital_deployment_claimed": false
+  },
+  "commercial_entry_point": {
+    "name": "Aweb Agent Operations Audit",
+    "url": "https://aweblabs.ai/agent-operations-audit",
+    "scope": "One real agent/tool/API workflow mapped into objectives, tools, approval gates, risk controls, receipts, and an implementation roadmap."
+  },
+  "contact": {
+    "name": "Daniel Wahnich",
+    "role": "Founder, Aweb",
+    "email": "business@aweblabs.ai"
+  }
+}

@@ -102,6 +102,31 @@ Typical output:
 - one implementation roadmap,
 - optional live walkthrough.
 
+## First Working Session
+
+The first working session should stay narrow:
+
+| Step | Question |
+| --- | --- |
+| 1 | What is the one workflow the team wants an agent to help with? |
+| 2 | Which tools, APIs, MCP servers, databases, or internal systems does it touch? |
+| 3 | Which actions are read-only, local-write, external-action-gated, secret-gated, or claim-gated? |
+| 4 | What evidence must exist before the agent can act? |
+| 5 | What receipt should remain after the run completes, fails, or gets blocked? |
+
+## Acceptance Criteria
+
+A good audit outcome is practical, not theatrical:
+
+- one bounded workflow,
+- one explicit human approval model,
+- one tool/API/MCP capability map,
+- one risk matrix,
+- one receipt shape,
+- one realistic implementation roadmap.
+
+The audit is not successful if the result is just a better prompt. The point is the operating boundary around the agent.
+
 ## Public Boundary
 
 This pilot does not require posting private workflow details in GitHub.
@@ -112,5 +137,8 @@ For serious inquiries:
 
 Daniel Wahnich  
 Founder, Aweb  
-business@aweb.ai
+business@aweblabs.ai
 
+Public intake:
+
+https://aweblabs.ai/agent-operations-audit

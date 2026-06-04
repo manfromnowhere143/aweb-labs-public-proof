@@ -1,6 +1,6 @@
 # Aweb Public Control Plane Spec
 
-Draft public proof, v0.1.
+Public proof, v0.2.
 
 This is a public-safe technical sketch of how Aweb thinks about governed agent work. It is not the private Aweb implementation, not an API stability promise, and not a legal or security certification.
 
@@ -15,6 +15,23 @@ intent -> capability map -> policy -> plan -> approval -> execution -> receipt
 ```
 
 The goal is not to make agents timid. The goal is to make their boundaries explicit enough that ambitious work can be trusted, reviewed, repeated, and stopped.
+
+## Design Goals
+
+- Make the operator's intent explicit before tools run.
+- Normalize tools, APIs, MCP capabilities, data systems, and execution environments into a capability map.
+- Attach policy before execution, not after something goes wrong.
+- Stop at approval gates for sensitive external action.
+- Preserve evidence and receipts so the run can be reviewed without relying on chat history.
+- Degrade honestly when source material is missing, stale, private, or unverified.
+
+## Non-Goals
+
+- This public spec does not expose private implementation code.
+- It does not certify security posture.
+- It does not claim autonomous financial execution.
+- It does not authorize agents to send, submit, post, pay, deploy, or mutate external systems without approval.
+- It does not turn public examples into customer traction or provider endorsement.
 
 ## Governed Run State Machine
 
@@ -98,6 +115,17 @@ stateDiagram-v2
 }
 ```
 
+## Policy Invariants
+
+| Invariant | Required behavior |
+| --- | --- |
+| `default_deny_external_action` | External sends, submissions, posts, payments, legal actions, credential changes, deploys, and account actions must stop for human approval. |
+| `source_material_current` | High-consequence outputs must prefer current source material and mark stale or missing evidence. |
+| `claim_verification` | Claims about revenue, users, customers, funding, incorporation, performance, and partnerships must be verified or omitted. |
+| `secret_redaction` | Credentials, tokens, private inboxes, private docs, wallet instructions, and legal/investor details must not enter public proof. |
+| `receipt_required` | Completed, blocked, rejected, and failed runs should all produce a receipt-grade summary. |
+| `finance_boundary` | Finance surfaces are research, simulation, risk visibility, and decision support unless Daniel explicitly reopens legal/product scope. |
+
 ## Receipt Shape
 
 ```json
@@ -151,6 +179,17 @@ stateDiagram-v2
 | `external_action_gated` | Email, submit, post, payment, legal, or account actions. | Requires explicit human approval. |
 | `secret_gated` | Credentials, OAuth, private inboxes, wallet instructions, legal docs. | Never exposed publicly; use only in approved context. |
 | `claim_gated` | Revenue, users, funding, incorporation, customers, performance. | Must be verified or omitted. |
+
+## Threat Model
+
+| Risk | Aweb response |
+| --- | --- |
+| Agent overstates facts | Claim-gated assertions require source evidence or get omitted. |
+| Agent repeats stale material | Source policy prefers current materials and records stale context. |
+| Agent submits or sends too early | External action gates block until the operator approves exact content and target. |
+| Agent leaks secrets | Secret-gated material is excluded from public proof and handled only in approved private context. |
+| Agent hides failure | Failed, blocked, and rejected runs still produce receipts. |
+| Agent produces unverifiable work | Evidence, source maps, and validation state travel with the run. |
 
 ## Public Examples
 

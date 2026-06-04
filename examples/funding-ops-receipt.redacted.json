@@ -2,6 +2,11 @@
   "schema": "aweb.agent_receipt.v0",
   "run_id": "run_public_funding_ops_example",
   "status": "completed",
+  "receipt_integrity": {
+    "redaction_level": "public_safe",
+    "private_payload_hash_included": false,
+    "reason": "This example demonstrates receipt shape without exposing private workflow payloads."
+  },
   "operator_approval": {
     "required_for_external_action": true,
     "granted_for_external_action": false,

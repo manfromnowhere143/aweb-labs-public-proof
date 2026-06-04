@@ -69,13 +69,15 @@ Aweb may fit programs funding:
 
 ## Public Proof Links
 
-- Aweb final page: https://aweb-wine.vercel.app/final
-- Aweb V2: https://aweb-wine.vercel.app/v2
-- Product page: https://aweb-wine.vercel.app/product
-- Docs: https://aweb-wine.vercel.app/docs
-- MCP docs: https://aweb-wine.vercel.app/docs/mcp
-- API docs: https://aweb-wine.vercel.app/docs/api-reference
-- Provider catalog: https://aweb-wine.vercel.app/api-warehouse/providers
+- Aweb final page: https://aweblabs.ai/final
+- Aweb V2: https://aweblabs.ai/v2
+- Product page: https://aweblabs.ai/product
+- Docs: https://aweblabs.ai/docs
+- MCP docs: https://aweblabs.ai/docs/mcp
+- API docs: https://aweblabs.ai/docs/api-reference
+- Provider catalog: https://aweblabs.ai/api-warehouse/providers
+- Technical reviewer guide: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/REVIEWER_GUIDE.md
+- Machine-readable proof index: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/PUBLIC-PROOF.json
 - Public control-plane spec: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/SPEC.md
 - Paid pilot outline: https://github.com/manfromnowhere143/aweb-labs-public-proof/blob/main/PILOT.md
 
@@ -97,8 +99,7 @@ This is appropriate for founders or teams already using agents in operations, da
 
 Daniel Wahnich  
 Founder, Aweb  
-dev@alfred-ai.app
-
+business@aweblabs.ai
 
 ## Boundary
 
